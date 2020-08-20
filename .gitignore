@@ -34,3 +34,6 @@
 # cmake debug folder
 cmake-build-debug
 
+# clion generated folder
+.idea
+
