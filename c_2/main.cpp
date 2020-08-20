@@ -1,7 +1,4 @@
-#include <iostream>
-
-int& readNumber();
-void writeAnswer(int& input);
+#include "io.h"
 
 int main() {
     int firstNumber {readNumber()};
@@ -11,16 +8,4 @@ int main() {
     writeAnswer(sum);
 
     return 0;
-}
-
-int& readNumber() {
-    std::cout << "Enter an integer: ";
-    int input {};
-    std::cin >> input;
-
-    return input;
-}
-
-void writeAnswer(int& input) {
-    std::cout << "The sum of the two numbers are: " << input << std::endl;
 }
