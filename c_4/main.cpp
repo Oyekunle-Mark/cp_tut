@@ -1,7 +1,7 @@
 #include <iostream>
 
 double getDouble() {
-    std::cout << "Enter a double value: " << '\n';
+    std::cout << "Enter a double value: ";
     double input{};
     std::cin >> input;
 
@@ -9,7 +9,7 @@ double getDouble() {
 }
 
 char getSymbol() {
-    std::cout << "Enter one of the following: +, -, * or /: \n";
+    std::cout << "Enter one of the following: +, -, * or /: ";
     char sym{};
     std::cin >> sym;
 
@@ -33,11 +33,11 @@ void printAnswer(double inp1, double inp2, char op) {
             answer = inp1 / inp2;
             break;
         default:
-            std::cout << "Invalid operator.\n";
+            std::cout << "Invalid operator.";
             return;
     }
 
-    std::cout << inp1 << " " << op << " " << inp2 << "is " << answer;
+    std::cout << inp1 << " " << op << " " << inp2 << " is " << answer;
 }
 
 int main() {
