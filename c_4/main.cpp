@@ -8,7 +8,7 @@ double getDouble() {
     return input;
 }
 
-char  getSymbol() {
+char getSymbol() {
     std::cout << "Enter one of the following: +, -, * or /: \n";
     char sym{};
     std::cin >> sym;
@@ -19,7 +19,7 @@ char  getSymbol() {
 void printAnswer(double inp1, double inp2, char op) {
     double answer{};
 
-    switch(op) {
+    switch (op) {
         case '+':
             answer = inp1 + inp2;
             break;
