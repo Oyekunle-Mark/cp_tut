@@ -5,7 +5,7 @@
 #ifndef C_2_IO_H
 #define C_2_IO_H
 
-int& readNumber();
-void writeAnswer(int& input);
+int readNumber();
+void writeAnswer(const int& input);
 
 #endif //C_2_IO_H

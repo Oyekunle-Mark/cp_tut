@@ -4,7 +4,7 @@
 #include <iostream>
 #include "io.h"
 
-int& readNumber() {
+int readNumber() {
     std::cout << "Enter an integer: ";
     int input {};
     std::cin >> input;
@@ -12,6 +12,6 @@ int& readNumber() {
     return input;
 }
 
-void writeAnswer(int& input) {
+void writeAnswer(const int& input) {
     std::cout << "The sum of the two numbers are: " << input << std::endl;
 }
