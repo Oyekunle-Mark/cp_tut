@@ -1,4 +1,5 @@
 #include <iostream>
+#include "constants.h"
 
 double getTowerHeight();
 
@@ -31,7 +32,7 @@ double getTowerHeight() {
 
 double calculateHeight(double towerHeight, int seconds) {
     // using the formula [ s = u * t + (a * t^2) / 2 ], here u(initial velocity) = 0
-    double distance{(9.8 * (seconds * seconds)) / 2};
+    double distance{(constants::gravity * (seconds * seconds)) / 2};
     double currentHeight{towerHeight - distance};
 
     return currentHeight;
