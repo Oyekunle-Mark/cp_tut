@@ -17,12 +17,12 @@ struct Monster {
 };
 
 void printMonster(const Monster &monster) {
-    std::map<MonsterType, std::string> typeName {
-            {MonsterType::Ogre, "Ogre"},
+    std::map<MonsterType, std::string> typeName{
+            {MonsterType::Ogre,   "Ogre"},
             {MonsterType::Dragon, "Dragon"},
-            {MonsterType::Orc, "Orc"},
+            {MonsterType::Orc,    "Orc"},
             {MonsterType::Spider, "Spider"},
-            {MonsterType::Slime, "Slime"}
+            {MonsterType::Slime,  "Slime"}
     };
 
     std::cout << "This " << typeName[monster.type]
