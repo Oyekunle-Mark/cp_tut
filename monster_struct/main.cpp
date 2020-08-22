@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <map>
 
 enum class MonsterType {
     Ogre,
@@ -16,7 +17,15 @@ struct Monster {
 };
 
 void printMonster(const Monster &monster) {
-    std::cout << "This " << monster.type
+    std::map<MonsterType, std::string> typeName {
+            {MonsterType::Ogre, "Ogre"},
+            {MonsterType::Dragon, "Dragon"},
+            {MonsterType::Orc, "Orc"},
+            {MonsterType::Spider, "Spider"},
+            {MonsterType::Slime, "Slime"}
+    };
+
+    std::cout << "This " << typeName[monster.type]
               << " is named " << monster.name
               << " and has " << monster.health
               << " health.\n";
