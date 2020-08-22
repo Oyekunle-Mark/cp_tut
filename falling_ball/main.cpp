@@ -7,17 +7,20 @@ double calculateHeight(double towerHeight, int seconds);
 
 void printHeight(double height, int seconds);
 
-void calculateAndPrintHeight(double towerHeight, int seconds);
+double calculateAndPrintHeight(double towerHeight, int seconds);
 
 int main() {
     double towerHeight{getTowerHeight()};
+    size_t time = 0;
 
-    calculateAndPrintHeight(towerHeight, 0);
-    calculateAndPrintHeight(towerHeight, 1);
-    calculateAndPrintHeight(towerHeight, 2);
-    calculateAndPrintHeight(towerHeight, 3);
-    calculateAndPrintHeight(towerHeight, 4);
-    calculateAndPrintHeight(towerHeight, 5);
+    while (true) {
+        double currentHeight = calculateAndPrintHeight(towerHeight, time);
+
+        if (currentHeight < 0.0)
+            break;
+
+        ++time;
+    }
 
     return 0;
 }
@@ -42,10 +45,12 @@ void printHeight(double height, int seconds) {
     if (height > 0.0)
         std::cout << "At " << seconds << " seconds, ball at " << height << " meters\n";
     else
-        std::cout << "At " << seconds << " ball is on the ground.\n";
+        std::cout << "At " << seconds << " seconds, ball is on the ground.\n";
 }
 
-void calculateAndPrintHeight(double towerHeight, int seconds) {
+double calculateAndPrintHeight(double towerHeight, int seconds) {
     double height = calculateHeight(towerHeight, seconds);
     printHeight(height, seconds);
+
+    return height;
 }
