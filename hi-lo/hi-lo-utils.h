@@ -8,9 +8,9 @@
 #include <cstdlib>
 
 namespace constants {
-    inline constexpr size_t tryCount {7};
-    inline constexpr size_t minGuess {1};
-    inline constexpr size_t maxGuess {100};
+    inline constexpr size_t tryCount{7};
+    inline constexpr size_t minGuess{1};
+    inline constexpr size_t maxGuess{100};
 }
 
 enum class Result {
@@ -20,9 +20,13 @@ enum class Result {
 };
 
 size_t getGuess(size_t guessCount);
+
 char getChoice();
+
 Result compareGuess(size_t userInput, size_t gameGuess);
+
 void runGame();
+
 size_t generateRandomNumber();
 
 #endif //HI_LO_HI_LO_UTILS_H

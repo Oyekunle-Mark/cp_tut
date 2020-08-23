@@ -44,7 +44,7 @@ Result compareGuess(size_t userInput, size_t gameGuess) {
 }
 
 void runGame() {
-    std::cout << "Let's play a game.  I'm thinking of a number.  You have "
+    std::cout << "Let's play a game. I'm thinking of a number. You have "
               << constants::tryCount
               << " tries to guess what it is.\n";
 
