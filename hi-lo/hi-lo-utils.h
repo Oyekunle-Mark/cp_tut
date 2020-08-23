@@ -6,7 +6,6 @@
 #define HI_LO_HI_LO_UTILS_H
 
 #include <cstdlib>
-#include <random>
 
 namespace constants {
     inline constexpr size_t tryCount {7};
@@ -22,8 +21,8 @@ enum class Result {
 
 size_t getGuess(size_t guessCount);
 char getChoice();
-Result compareGuess(size_t userInput);
-void runGameLoop();
-int generateRandomNumber();
+Result compareGuess(size_t userInput, int gameGuess);
+void runGame();
+size_t generateRandomNumber();
 
 #endif //HI_LO_HI_LO_UTILS_H
