@@ -21,7 +21,7 @@ enum class Result {
 
 size_t getGuess(size_t guessCount);
 char getChoice();
-Result compareGuess(size_t userInput, int gameGuess);
+Result compareGuess(size_t userInput, size_t gameGuess);
 void runGame();
 size_t generateRandomNumber();
 

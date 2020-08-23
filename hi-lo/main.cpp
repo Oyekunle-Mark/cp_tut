@@ -1,6 +1,12 @@
-#include <iostream>
+#include "hi-lo-utils.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    char userInput{};
+
+    do {
+        runGame();
+        userInput = getChoice();
+    } while (userInput != 'n');
+
     return 0;
 }
