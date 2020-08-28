@@ -11,6 +11,7 @@ int main() {
     std::cout << "- Point 1: " << -p1 << '\n';
 
     Point p3 = p1;
+    p3 += 3;
 
     std::cout << "Point 3: " << p3 << '\n';
 
