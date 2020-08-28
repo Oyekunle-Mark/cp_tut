@@ -17,9 +17,11 @@ public:
 
     IntArray(const IntArray &copy);
 
-    int &operator[](int index);
+    IntArray &operator=(const IntArray &rhs);
 
-    friend std::ostream &operator<<(std::ostream out, const IntArray &rhs);
+    int &operator[](std::size_t index);
+
+    friend std::ostream &operator<<(std::ostream &out, const IntArray &rhs);
 
     ~IntArray();
 };
