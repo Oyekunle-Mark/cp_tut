@@ -26,6 +26,6 @@ Point operator+(const Point &p1, const Point &p2) {
 }
 
 std::ostream &operator<<(std::ostream &out, const Point &rhs) {
-    out << "Point (" << rhs.m_x << ", " << rhs.m_y << ")";
+    out << "Point(" << rhs.m_x << ", " << rhs.m_y << ")";
     return out;
 }
