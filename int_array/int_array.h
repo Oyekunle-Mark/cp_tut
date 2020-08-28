@@ -21,6 +21,8 @@ public:
 
     int &operator[](std::size_t index);
 
+    void copyArray(int *source);
+
     friend std::ostream &operator<<(std::ostream &out, const IntArray &rhs);
 
     ~IntArray();

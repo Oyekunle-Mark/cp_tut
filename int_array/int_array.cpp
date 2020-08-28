@@ -13,8 +13,7 @@ IntArray::IntArray(const IntArray &copy) {
     this->m_size = copy.m_size;
     this->array = new int[copy.m_size];
 
-    for (std::size_t i{}; i < copy.m_size; ++i)
-        this->array[i] = copy.array[i];
+    copyArray(copy.array);
 }
 
 IntArray::~IntArray() {
@@ -29,14 +28,18 @@ IntArray &IntArray::operator=(const IntArray &rhs) {
     this->m_size = rhs.m_size;
     this->array = new int[rhs.m_size];
 
-    for (std::size_t i{}; i < rhs.m_size; ++i)
-        this->array[i] = rhs.array[i];
+    copyArray(rhs.array);
 
     return *this;
 }
 
 int &IntArray::operator[](std::size_t index) {
     return array[index];
+}
+
+void IntArray::copyArray(int *source) {
+    for (std::size_t i{}; i < m_size; ++i)
+        array[i] = source[i];
 }
 
 std::ostream &operator<<(std::ostream &out, const IntArray &rhs) {
