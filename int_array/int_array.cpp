@@ -41,7 +41,7 @@ int &IntArray::operator[](std::size_t index) {
 
 std::ostream &operator<<(std::ostream &out, const IntArray &rhs) {
     for (std::size_t i{}; i < rhs.m_size; ++i)
-        out << rhs.array[i];
+        out << rhs.array[i] << ' ';
 
     return out;
 }
