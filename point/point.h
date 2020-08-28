@@ -18,7 +18,9 @@ public:
 
     Point &operator=(const Point &rhs);
 
-    friend std::ostream &operator<<(const std::ostream &out, const Point &rhs);
+    friend Point operator+(const Point &p1, const Point &p2);
+
+    friend std::ostream &operator<<(std::ostream &out, const Point &rhs);
 };
 
 #endif //POINT_POINT_H
