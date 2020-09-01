@@ -1,6 +1,14 @@
 #include <iostream>
+#include "creature.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Creature o{"orc", 'o', 4, 2, 10};
+    o.addGold(5);
+    o.reduceHealth(1);
+    std::cout << "The " << o.getName()
+              << " has " << o.getHealth()
+              << " health and is carrying " << o.getGold()
+              << " gold.\n";
+
     return 0;
 }
