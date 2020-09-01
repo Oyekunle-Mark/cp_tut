@@ -1,16 +1,9 @@
 #include <iostream>
-#include "player.h"
+#include "monster.h"
 
 int main() {
-    std::cout << "Enter your name: ";
-    std::string playerName{};
-    std::cin >> playerName;
-    std::cout << "Welcome, " << playerName << ".\n";
-
-    const Player player{playerName};
-    std::cout << "You have " << player.getHealth()
-              << " health and are carrying " << player.getGold()
-              << " gold.";
+    Monster m{ Monster::Type::orc };
+    std::cout << "A " << m.getName() << " (" << m.getSymbol() << ") was created.\n";
 
     return 0;
 }

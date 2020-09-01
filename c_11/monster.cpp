@@ -4,6 +4,9 @@
 
 #include "monster.h"
 
+Monster::Monster(Type type)
+        : Creature(getDefaultCreature(type)) {}
+
 const Creature &Monster::getDefaultCreature(Type type) {
     static std::array<Creature, static_cast<std::size_t>(Type::max_types)> monsterStore
             {

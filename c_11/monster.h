@@ -17,6 +17,8 @@ public:
         max_types
     };
 
+    Monster(Type type);
+
     static const Creature&  getDefaultCreature(Type type);
 };
 
