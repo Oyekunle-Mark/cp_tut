@@ -2,7 +2,7 @@
 // Created by Oyekunle Oloyede on 01/09/2020.
 //
 #include <random>
-#include <ctime>
+#include <cstdlib>
 #include "monster.h"
 
 Monster::Monster(Type type)
@@ -22,8 +22,12 @@ const Creature &Monster::getDefaultCreature(Type type) {
 }
 
 Monster::Type Monster::getRandomMonster() {
-    std::mt19937 mersenne{static_cast<std::mt19937::result_type>(std::time(nullptr))};
-    std::uniform_int_distribution die{0, static_cast<int>(Type::max_types) - 1};
+    const int min{};
+    constexpr int max{static_cast<int>(Type::max_types) - 1};
+    static constexpr double fraction{
+            1.0 / (RAND_MAX + 1.0)}; // static used for efficiency, so we only calculate this value once
+    // evenly distribute the random number across our range
+    int randomNum{min + static_cast<int>((max - min + 1) * (std::rand() * fraction))};
 
-    return static_cast<Type>(die(mersenne));
+    return static_cast<Type>(randomNum);
 }
