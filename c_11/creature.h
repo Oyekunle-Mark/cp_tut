@@ -33,8 +33,6 @@ public:
     bool isDead() const;
 
     void addGold(int amount);
-
-    virtual ~Creature();
 };
 
 

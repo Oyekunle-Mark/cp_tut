@@ -5,7 +5,7 @@
 #include "creature.h"
 
 Creature::Creature(const std::string &name, char symbol, int health, int damage, int gold) :
-        name(name), symbol(symbol), health(health), damage(damage), gold(gold) {}
+        name(name), symbol(symbol), health(health), gold(gold), damage(damage) {}
 
 const std::string &Creature::getName() const {
     return name;
