@@ -22,7 +22,7 @@ const Creature &Monster::getDefaultCreature(Type type) {
 }
 
 Monster::Type Monster::getRandomMonster() {
-    const int min{};
+    constexpr int min{};
     constexpr int max{static_cast<int>(Type::max_types) - 1};
     static constexpr double fraction{
             1.0 / (RAND_MAX + 1.0)}; // static used for efficiency, so we only calculate this value once
