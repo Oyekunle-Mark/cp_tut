@@ -20,6 +20,8 @@ public:
     Monster(Type type);
 
     static const Creature&  getDefaultCreature(Type type);
+
+    static Type getRandomMonster();
 };
 
 
