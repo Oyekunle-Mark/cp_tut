@@ -5,9 +5,16 @@
 #ifndef C_11_MONSTER_H
 #define C_11_MONSTER_H
 
+#include "creature.h"
 
-class Monster {
-
+class Monster : public Creature {
+public:
+    enum class Type {
+        dragon,
+        orc,
+        slime,
+        max_types
+    };
 };
 
 
