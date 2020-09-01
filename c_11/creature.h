@@ -12,8 +12,9 @@ private:
     std::string name;
     char symbol;
     int health;
-    int damage;
     int gold;
+protected:
+    int damage;
 public:
     Creature(const std::string &name, char symbol, int health, int damage, int gold);
 
@@ -32,6 +33,8 @@ public:
     bool isDead() const;
 
     void addGold(int amount);
+
+    virtual ~Creature();
 };
 
 
