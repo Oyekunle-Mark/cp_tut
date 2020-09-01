@@ -6,6 +6,7 @@
 #define C_11_MONSTER_H
 
 #include "creature.h"
+#include <array>
 
 class Monster : public Creature {
 public:
@@ -15,6 +16,8 @@ public:
         slime,
         max_types
     };
+
+    static const Creature&  getDefaultCreature(Type type);
 };
 
 
