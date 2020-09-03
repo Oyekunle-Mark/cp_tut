@@ -10,7 +10,7 @@ public:
             : m_center{center}, m_radius{radius} {}
 
     std::ostream &print(std::ostream &out) const override {
-        out << "(" << m_center << "radius " << m_radius << ")\n";
+        out << "(" << m_center << ", radius " << m_radius << ")\n";
         return out;
     }
 };
@@ -25,12 +25,19 @@ public:
             : m_p1{p1}, m_p2{p2}, m_p3{p3} {}
 
     std::ostream &print(std::ostream &out) const override {
-        out << "(" << m_p1 << m_p2 << m_p3 << ")";
+        out << "(" << m_p1 << ", "
+            << m_p2 << ", "
+            << m_p3 << ")";
         return out;
     }
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Circle c{Point{1, 2, 3}, 7};
+    std::cout << c << '\n';
+
+    Triangle t{Point{1, 2, 3}, Point{4, 5, 6}, Point{7, 8, 9}};
+    std::cout << t << '\n';
+
     return 0;
 }
