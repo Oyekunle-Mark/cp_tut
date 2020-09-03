@@ -1,3 +1,4 @@
+#include <vector>
 #include "shape.h"
 #include "point.h"
 
@@ -27,17 +28,25 @@ public:
     std::ostream &print(std::ostream &out) const override {
         out << "(" << m_p1 << ", "
             << m_p2 << ", "
-            << m_p3 << ")";
+            << m_p3 << ")\n";
         return out;
     }
 };
 
 int main() {
-    Circle c{Point{1, 2, 3}, 7};
-    std::cout << c << '\n';
+    std::vector<Shape *> v{
+            new Circle{Point{1, 2, 3}, 7},
+            new Triangle{Point{1, 2, 3}, Point{4, 5, 6}, Point{7, 8, 9}},
+            new Circle{Point{4, 5, 6}, 3}
+    };
 
-    Triangle t{Point{1, 2, 3}, Point{4, 5, 6}, Point{7, 8, 9}};
-    std::cout << t << '\n';
+    // print each shape in vector v on its own line here
+    for (const Shape *shape: v)
+        std::cout << *shape;
+
+//    std::cout << "The largest radius is: " << getLargestRadius(v) << '\n'; // write this function
+//
+//    // delete each element in the vector here
 
     return 0;
 }
