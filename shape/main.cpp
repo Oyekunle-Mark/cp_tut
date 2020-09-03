@@ -57,13 +57,13 @@ int main() {
             new Circle{Point{4, 5, 6}, 3}
     };
 
-    // print each shape in vector v on its own line here
     for (const Shape *shape: v)
         std::cout << *shape;
 
     std::cout << "The largest radius is: " << getLargestRadius(v) << '\n'; // write this function
 
-    // delete each element in the vector here
+    for (const Shape *shape : v)
+        delete shape;
 
     return 0;
 }
