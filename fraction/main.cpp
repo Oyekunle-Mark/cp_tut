@@ -1,6 +1,16 @@
-#include <iostream>
+#include "fraction.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    int numerator{};
+    std::cout << "Enter the numerator: ";
+    std::cin >> numerator;
+
+    int denominator{};
+    std::cout << "Enter the denominator: ";
+    std::cin >> denominator;
+
+    Fraction fraction{numerator, denominator};
+    std::cout << fraction;
+
     return 0;
 }
