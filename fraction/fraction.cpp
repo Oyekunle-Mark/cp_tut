@@ -7,10 +7,17 @@
 Fraction::Fraction(int numerator, int denominator)
         : numerator{numerator}, denominator{denominator} {
     if (denominator == 0)
-        throw std::runtime_error("Invalid denominator");
+        throw FractionException{"Invalid denominator"};
 }
 
 std::ostream &operator<<(std::ostream &out, const Fraction &fraction) {
     out << fraction.numerator << "/" << fraction.denominator << '\n';
     return out;
+}
+
+FractionException::FractionException(const char *message)
+        : message{message} {}
+
+const char *FractionException::what() const noexcept {
+    return message;
 }

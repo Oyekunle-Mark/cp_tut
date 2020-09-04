@@ -12,7 +12,7 @@ int main() {
     try {
         Fraction fraction{numerator, denominator};
         std::cout << fraction;
-    } catch (const std::exception &e) {
+    } catch (const FractionException &e) {
         std::cout << e.what() << '\n';
     }
 

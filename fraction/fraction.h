@@ -18,4 +18,14 @@ public:
     friend std::ostream &operator<<(std::ostream &out, const Fraction &fraction);
 };
 
+class FractionException : public std::exception {
+private:
+    const char *message;
+
+public:
+    explicit FractionException(const char *message);
+
+    virtual const char *what() const noexcept;
+};
+
 #endif //FRACTION_FRACTION_H
