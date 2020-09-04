@@ -6,14 +6,14 @@ private:
     T m_first;
     U m_second;
 public:
-    Pair(T first, U second)
+    Pair(const T &first, const U &second)
             : m_first{first}, m_second{second} {}
 
-    T first() const {
+    const T &first() const {
         return m_first;
     }
 
-    U second() const {
+    const U &second() const {
         return m_second;
     }
 };
