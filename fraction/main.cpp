@@ -9,8 +9,12 @@ int main() {
     std::cout << "Enter the denominator: ";
     std::cin >> denominator;
 
-    Fraction fraction{numerator, denominator};
-    std::cout << fraction;
+    try {
+        Fraction fraction{numerator, denominator};
+        std::cout << fraction;
+    } catch (const std::exception &e) {
+        std::cout << e.what() << '\n';
+    }
 
     return 0;
 }
