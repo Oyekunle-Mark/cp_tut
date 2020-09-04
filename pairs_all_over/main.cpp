@@ -18,6 +18,13 @@ public:
     }
 };
 
+template<class V>
+class StringValuePair : public Pair<std::string, V> {
+public:
+    StringValuePair(const std::string &key, const V &value)
+            : Pair<std::string, V>{key, value} {}
+};
+
 int main() {
     const Pair<int, double> p1{5, 6.7};
     std::cout << "Pair: " << p1.first() << ' ' << p1.second() << '\n';
