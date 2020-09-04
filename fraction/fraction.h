@@ -13,18 +13,9 @@ private:
     int numerator;
     int denominator;
 public:
-    Fraction(int numerator, int denominator)
-            : numerator{numerator}, denominator{denominator} {
-        if (denominator == 0)
-            throw std::runtime_error("Invalid denominator");
-    }
+    Fraction(int numerator, int denominator);
 
     friend std::ostream &operator<<(std::ostream &out, const Fraction &fraction);
 };
-
-std::ostream &operator<<(std::ostream &out, const Fraction &fraction) {
-    out << fraction.numerator << "/" << fraction.denominator << '\n';
-    return out;
-}
 
 #endif //FRACTION_FRACTION_H
